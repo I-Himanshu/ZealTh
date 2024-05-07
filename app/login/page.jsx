@@ -5,6 +5,7 @@ import app from "@/config";
 import { useRouter } from "next/navigation";
 
 const login = () => {
+  if(!window) return;
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPass, setRegisterPass] = useState();
   const router = useRouter();
