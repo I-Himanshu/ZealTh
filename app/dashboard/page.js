@@ -9,7 +9,13 @@ import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 
 const Topics = () => {
-  if(!window) return;
+  const [l,m] = useState(true);
+
+useEffect(()=>{
+    if(window) m(false;
+},[]);
+
+if(l) return <>Loading</>;
   const auth = getAuth();
   const router = useRouter();
   const [user, setUser] = useState(null);
