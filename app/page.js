@@ -14,7 +14,10 @@ export default function Home() {
   const [l,m] = useState(true);
 
 useEffect(()=>{
+    try{
     if(window) m(false);
+  }catch(e){
+  }
 },[]);
 
 if(l) return <>Loading</>;
