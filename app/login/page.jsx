@@ -1,11 +1,17 @@
 "use client";
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import app from "@/config";
 import { useRouter } from "next/navigation";
 
 const login = () => {
-  if(!window) return;
+  const [l,m] = useState(true);
+
+useEffect(()=>{
+    if(window) m(false;
+},[]);
+
+if(l) return <>Loading</>;
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPass, setRegisterPass] = useState();
   const router = useRouter();
