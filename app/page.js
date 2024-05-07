@@ -11,9 +11,17 @@ import app from "@/config";
 import Topics from "./dashboard/page";
 
 export default function Home() {
+  const [l,m] = useState(true);
+
+useEffect(()=>{
+    if(window) m(false;
+},[]);
+
+if(l) return <>Loading</>;
   const [user, setUser] = useState(null);
   const router = useRouter();
 
+  
   useEffect(() => {
     const auth = getAuth(app);
     const unsubscribe = auth.onAuthStateChanged((user) => {
