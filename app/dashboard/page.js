@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 
 const Topics = () => {
+  if(!window) return;
   const auth = getAuth();
   const router = useRouter();
   const [user, setUser] = useState(null);
