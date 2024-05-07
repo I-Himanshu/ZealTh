@@ -9,6 +9,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  if(!window) return <h1>Hello</h1>;
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
