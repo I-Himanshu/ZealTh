@@ -12,7 +12,10 @@ const Topics = () => {
   const [l,m] = useState(true);
 
 useEffect(()=>{
+  try{
     if(window) m(false);
+  }catch(e){
+  }
 },[]);
 
 if(l) return <>Loading</>;
